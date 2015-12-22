@@ -80,11 +80,11 @@ var confDB = {
             tx.executeSql(sql);
 
             sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email, ultimos)"+
-                  "VALUES(2, 'Ivan Estruch', 'Extremo', 18, 20, 12, 19, 655874131, 'estruch95.b@gmail.com', 1)";
+                  "VALUES(2, 'Ivan Estruch', 'Extremo', 18, 20, 12, 19, 655874131, 'estruch95.b@gmail.com', 0)";
             tx.executeSql(sql);
 
             sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email, ultimos)"+
-                  "VALUES(3, 'Jose Igualada', 'MedioCentro', 8, 21, 9, 22, 699555878, 'igualada@hotmail.com', 1)";
+                  "VALUES(3, 'Jose Igualada', 'MedioCentro', 8, 21, 9, 22, 699555878, 'igualada@hotmail.com', 0)";
             tx.executeSql(sql);
 
             sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email, ultimos)"+
@@ -92,11 +92,11 @@ var confDB = {
             tx.executeSql(sql);
 
             sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email, ultimos)"+
-                  "VALUES(5, 'Fran Primo', 'Defensa', 8, 31, 3, 5, 699823000, 'franpri@gmail.com', 0)";
+                  "VALUES(5, 'Fran Primo', 'Defensa', 8, 31, 3, 5, 699823000, 'franpri@gmail.com', 1)";
             tx.executeSql(sql);
 
             sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email, ultimos)"+
-                  "VALUES(6, 'David Alos', 'Defensa', 22, 21, 5, 8, 666779966, 'alos@gmail.com', 0)";
+                  "VALUES(6, 'David Alos', 'Defensa', 22, 21, 5, 8, 666779966, 'alos@gmail.com', 1)";
             tx.executeSql(sql);
 
             sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email, ultimos)"+

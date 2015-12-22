@@ -19,13 +19,37 @@ var cargarDB = {
     },
 
     mostrarLista: function(tx){
-        var sql = "SELECT * FROM jugadores;";
+        var sql = "SELECT * FROM jugadores WHERE ultimos=1;";
         console.log("Lanzamos la consulta");
         tx.executeSql(
             sql,
             [],
             function(tx,result){
                 console.log("Se ha lanzado la consulta con exito");
+                if(result.rows.length>0){
+                    for(i=0;i<result.rows.length;i++){
+                        var fila=result.rows.item(i);
+                        //METEMOS LOS DATOS RELACIONANDO CON EL HTML(JQUERY)
+                        $("#listaJugadores ul").append("<li>ÚLTIMO<a href='JugadorDetalles.html' data-ajax='false' data-id='"+fila.id+"'><img src='img/profile1.png'/>"+fila.nombre+"<br><br>"+fila.posicion+"</a></li>").listview('refresh');
+                       
+
+                    }
+                }
+            },
+            function(tx,error){
+                this.mostrarListaError(error);
+            }
+
+            );
+
+        var sql = "SELECT * FROM jugadores WHERE ultimos=0;";
+        console.log("Lanzamos la consulta");
+        tx.executeSql(
+            sql,
+            [],
+            function(tx,result){
+                console.log("Se ha lanzado la consulta con exito");
+                $("#listaJugadores ul").append("<br>").listview('refresh');
                 if(result.rows.length>0){
                     for(i=0;i<result.rows.length;i++){
                         var fila=result.rows.item(i);
