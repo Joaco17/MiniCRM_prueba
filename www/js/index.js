@@ -65,7 +65,8 @@ var confDB = {
                   "goles        INTEGER         not null,"+
                   "asistencias  INTEGER         not null,"+
                   "telefono     VARCHAR(9)      not null,"+
-                  "email        VARCHAR(250)    not null );"
+                  "email        VARCHAR(250)    not null,"+
+                  "ultimos      NUMERIC(1,0)    not null );"
                 ;
 
             tx.executeSql(sql);
@@ -74,32 +75,32 @@ var confDB = {
             //Inserción de datos en la tabla creada anteriormente
             console.log("INTRODUCIMOS DATOS EN LA TABLA");
 
-            sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email)"+
-                  "VALUES(1, 'Joaquin Bahamonde', 'Delantero', 17, 21, 25, 12, 664638150, 'joballo.17@gmail.com')";
+            sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email, ultimos)"+
+                  "VALUES(1, 'Joaquin Bahamonde', 'Delantero', 17, 21, 25, 12, 664638150, 'joballo.17@gmail.com', 1)";
             tx.executeSql(sql);
 
-            sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email)"+
-                  "VALUES(2, 'Ivan Estruch', 'Extremo', 18, 20, 12, 19, 655874131, 'estruch95.b@gmail.com')";
+            sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email, ultimos)"+
+                  "VALUES(2, 'Ivan Estruch', 'Extremo', 18, 20, 12, 19, 655874131, 'estruch95.b@gmail.com', 1)";
             tx.executeSql(sql);
 
-            sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email)"+
-                  "VALUES(3, 'Jose Igualada', 'MedioCentro', 8, 21, 9, 22, 699555878, 'igualada@hotmail.com')";
+            sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email, ultimos)"+
+                  "VALUES(3, 'Jose Igualada', 'MedioCentro', 8, 21, 9, 22, 699555878, 'igualada@hotmail.com', 1)";
             tx.executeSql(sql);
 
-            sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email)"+
-                  "VALUES(4, 'Alvaro Banyo', 'Portero', 1, 26, 0, 0, 633222147, 'albafo@hotmail.com')";
+            sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email, ultimos)"+
+                  "VALUES(4, 'Alvaro Banyo', 'Portero', 1, 26, 0, 0, 633222147, 'albafo@hotmail.com', 0)";
             tx.executeSql(sql);
 
-            sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email)"+
-                  "VALUES(5, 'Fran Primo', 'Defensa', 8, 31, 3, 5, 699823000, 'franpri@gmail.com')";
+            sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email, ultimos)"+
+                  "VALUES(5, 'Fran Primo', 'Defensa', 8, 31, 3, 5, 699823000, 'franpri@gmail.com', 0)";
             tx.executeSql(sql);
 
-            sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email)"+
-                  "VALUES(6, 'David Alos', 'Defensa', 22, 21, 5, 8, 666779966, 'alos@gmail.com')";
+            sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email, ultimos)"+
+                  "VALUES(6, 'David Alos', 'Defensa', 22, 21, 5, 8, 666779966, 'alos@gmail.com', 0)";
             tx.executeSql(sql);
 
-            sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email)"+
-                  "VALUES(7, 'Nico Pons', 'Defensa', 44, 21, 3, 3, 677455111, 'nicopons24@gmail.com')";
+            sql = "INSERT INTO jugadores(id, nombre, posicion, dorsal, edad, goles, asistencias, telefono, email, ultimos)"+
+                  "VALUES(7, 'Nico Pons', 'Defensa', 44, 21, 3, 3, 677455111, 'nicopons24@gmail.com', 0)";
             tx.executeSql(sql);
             console.log("INSERCION DE DATOS REALIZADA CORRECTAMENTE");
     },
